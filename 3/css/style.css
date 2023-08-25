@@ -603,6 +603,9 @@
   text-transform: uppercase;
   color: #222222;
 }
+.discounts {
+  display: flex;
+}
 .discounts__container {
   margin: 35px 20px;
   padding: 0;
