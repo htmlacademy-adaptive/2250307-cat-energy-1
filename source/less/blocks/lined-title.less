@@ -1,0 +1,41 @@
+.lined-wrapper {
+  width: 320px;
+  padding-left: 20px;
+  overflow: hidden;
+
+  &--contacts {
+    margin-top: 26px;
+    margin-bottom: 35px;
+  }
+
+  &--comment {
+    margin-top: 24px;
+    margin-bottom: 38px;
+  }
+
+  &--additional {
+    margin-top: 23px;
+    margin-bottom: 34px;
+  }
+}
+
+.lined-wrapper__title {
+  margin: 0;
+  padding-right: 20px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    top: 14px;
+    left: 100%;
+    right: 0;
+    margin-right: -200%;
+    background-color: #68b738;
+  }
+}
