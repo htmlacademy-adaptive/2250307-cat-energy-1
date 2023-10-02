@@ -8,8 +8,17 @@
   white-space: nowrap;
   color: @special_light_grey;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &--choice {
     gap: 15px;
+
+    @media (min-width: @tablet-width) {
+      gap: 20px;
+    }
   }
 }
 
@@ -24,6 +33,11 @@
   line-height: inherit;
   text-transform: inherit;
   color: inherit;
+
+  @media (min-width: @tablet-width) {
+    padding: 11px 20px;
+    height: 52px;
+  }
 
   &--choice {
     flex-grow: 0;

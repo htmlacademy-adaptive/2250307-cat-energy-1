@@ -1,10 +1,20 @@
 .container {
-  width: 320px;
+  width: @mobile-width;
   margin: 0  auto;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding: 0 110px;
+  }
 
   &--light {
     background-color: @basic_white;
@@ -14,12 +24,31 @@
     background-color: @basic_grey;
   }
 
+  &--form {
+    @media (min-width: @tablet-width) {
+      padding: 0 70px;
+    }
+  }
+
   &--fieldset {
     gap: 14px;
     align-items: flex-start;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 70px;
+      gap: 20px;
+    }
   }
 
   &--choice {
     gap: 13px;
+  }
+
+  &--multichoice {
+    @media (min-width: @tablet-width) {
+      row-gap: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }

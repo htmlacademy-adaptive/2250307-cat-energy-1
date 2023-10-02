@@ -85,12 +85,12 @@
     </header>
 
     <main class="main-container">
-      <form class="program-selection-form container" action="" method="post">
+      <form class="program-selection-form container container--form" action="" method="post">
         <h1 class="program-selection-form__main-title main-title">
           Подбор программы
         </h1>
         <p class="program-selection-form__description">
-          Заполните анкету, и мы подберем программу питания для вашего кота
+          Заполните анкету, и мы подберем<br>программу питания для вашего кота
         </p>
         <fieldset class="program-selection-form__container program-selection-form__container--without-heading container container--fieldset">
           <legend class="visually-hidden">
@@ -142,8 +142,8 @@
 
         <fieldset class="program-selection-form__container">
           <div class="program-selection-form__lined-wrapper lined-wrapper lined-wrapper--contacts">
-            <legend class="program-selection-form__lined-title lined-wrapper__title">
-              Контактные данные<br>(владельца кота)
+            <legend class="program-selection-form__lined-title program-selection-form__lined-title--multiline lined-wrapper__title">
+              Контактные данные (владельца кота)
             </legend>
           </div>
           <div class="container container--fieldset">
@@ -179,7 +179,7 @@
               Дополнительно
             </legend>
           </div>
-          <div class="container container--fieldset container--choice">
+          <div class="container container--fieldset container--choice container--multichoice">
             <label class="program-selection-form__control control control--choice">
               <input class="control__input control__input--choice" type="checkbox" name="sweetener" checked>
               <span class="control__text">

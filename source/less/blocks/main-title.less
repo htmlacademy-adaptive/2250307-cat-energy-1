@@ -8,6 +8,11 @@
   line-height: 36px;
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -16,5 +21,9 @@
     right: 0;
     top: -28px;
     background-color: @additional_grey;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
