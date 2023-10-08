@@ -6,6 +6,10 @@
     padding-left: 30px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-left: 70px;
+  }
+
   &--contacts {
     margin-top: 26px;
     margin-bottom: 35px;
@@ -13,6 +17,10 @@
     @media (min-width: @tablet-width) {
       margin-top: 65px;
       margin-bottom: 76px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 70px;
     }
   }
 
@@ -24,6 +32,11 @@
       margin-top: 65px;
       margin-bottom: 87px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 70px;
+      margin-bottom: 78px;
+    }
   }
 
   &--additional {
@@ -33,6 +46,10 @@
     @media (min-width: @tablet-width) {
       margin-top: 65px;
       margin-bottom: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 70px;
     }
   }
 }
@@ -59,7 +76,7 @@
       top: 14px;
       right: 100%;
       left: 0;
-      margin-left: -100%;
+      margin-left: -300%;
       background-color: @basic_green;
     }
   }
@@ -71,7 +88,7 @@
     top: 14px;
     left: 100%;
     right: 0;
-    margin-right: -500%;
+    margin-right: -600%;
     background-color: @basic_green;
   }
 }
