@@ -6,25 +6,38 @@
   font-size: 16px;
   text-transform: uppercase;
   white-space: nowrap;
-  color: #444444;
+  color: @special_light_grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &--choice {
     gap: 15px;
+
+    @media (min-width: @tablet-width) {
+      gap: 20px;
+    }
   }
 }
 
 .control__input {
   flex-grow: 1;
   margin: 0;
-  padding: 14px 15px;
-  padding-bottom: 13px;
+  padding: 14px 15px 13px 15px;
   height: 45px;
-  border: 1px solid #e7e7e7;
+  border: 1px solid @special_white;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   text-transform: inherit;
   color: inherit;
+
+  @media (min-width: @tablet-width) {
+    padding: 11px 20px;
+    height: 52px;
+  }
 
   &--choice {
     flex-grow: 0;

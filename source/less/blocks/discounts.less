@@ -1,21 +1,51 @@
 .discounts {
   display: flex;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
 }
 
 .discounts__container {
-  margin-top: 35px;
-  margin-bottom: 35px;
   padding: 0;
+  margin: 35px 0;
   min-height: 290px;
-  width: 280px;
   background-image: url("../img/discounts-square.png"), url("../img/discounts-cat.jpg");
   background-repeat: no-repeat;
-  background-color: #64a83c;
+  background-color: @special_green;
+
+  @media (min-width: @tablet-width) {
+    min-height: auto;
+    flex-direction: row;
+    gap: 264px;
+    padding: 57px 77px;
+    margin-top: 70px;
+    margin-bottom: 75px;
+    background-image: url("../img/tablet-discounts-square.png"), url("../img/tablet-discounts-cat.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 56px 42px 43px 42px;
+    flex-direction: column;
+    gap: 46px;
+    background-image: url("../img/desktop-discounts-square.png"), url("../img/desktop-discounts-cat.jpg");
+  }
 }
 
 .discounts__icon {
   margin-top: 59px;
   margin-bottom: 48px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .discounts__description {
@@ -24,5 +54,13 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #ffffff;
+  color: @basic_white;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
 }

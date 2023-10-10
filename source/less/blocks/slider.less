@@ -1,6 +1,34 @@
 .slider {
   display: flex;
-  position: relative;
+  justify-content: center;
+  background-color: @lightest_grey;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    height: 462px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    margin: 0 auto;
+    height: 0;
+  }
+}
+
+.slider__container {
+  display: flex;
+  padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    padding-bottom: 0;
+    bottom: 101px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 85px;
+    right: 110px;
+  }
 }
 
 .slider__button {

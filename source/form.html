@@ -3,13 +3,14 @@
   <head>
     <link rel="stylesheet" href="./css/style.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy: Подбор программы</title>
   </head>
 
   <body class="page__body">
     <header class="main-header">
-      <div class="container">
-        <div class="main-header__container">
+      <div class="main-header__container">
+        <div class="container container--navigation">
           <a class="main-header__logo-link">
             <span class="visually-hidden">
               Cat Energy.
@@ -84,65 +85,67 @@
     </header>
 
     <main class="main-container">
-      <form class="program-selection-form container" action="" method="post">
+      <form class="program-selection-form container container--form" action="" method="post">
         <h1 class="program-selection-form__main-title main-title">
           Подбор программы
         </h1>
         <p class="program-selection-form__description">
-          Заполните анкету, и мы подберем программу питания для вашего кота
+          Заполните анкету, и мы подберем<br>программу питания для вашего кота
         </p>
-        <fieldset class="program-selection-form__container program-selection-form__container--without-heading container container--fieldset">
-          <legend class="visually-hidden">
-            Заполните данные о вашем питомце
-          </legend>
-          <label class="program-selection-form__control control">
-            <span class="control__text">
-              Имя:*
-            </span>
-            <input class="control__input" type="text" name="name" value="Барсик" required>
-          </label>
-          <label class="program-selection-form__control control">
-            <span class="control__text">
-              Вес (кг):*
-            </span>
-            <input class="control__input" type="number" name="weight" value="7" required>
-          </label>
-          <label class="program-selection-form__control control">
-            <span class="control__text">
-              Возраст (лет):
-            </span>
-            <input class="control__input" type="number" name="age" value="7">
-          </label>
-        </fieldset>
+        <div class="program-selection-form__pet-container">
+          <fieldset class="program-selection-form__container program-selection-form__container--main-pet">
+            <legend class="visually-hidden">
+              Заполните данные о вашем питомце
+            </legend>
+            <label class="program-selection-form__control control">
+              <span class="control__text">
+                Имя:*
+              </span>
+              <input class="control__input" type="text" name="name" value="Барсик" required>
+            </label>
+            <label class="program-selection-form__control control">
+              <span class="control__text">
+                Вес (кг):*
+              </span>
+              <input class="control__input" type="number" name="weight" value="7" required>
+            </label>
+            <label class="program-selection-form__control control">
+              <span class="control__text">
+                Возраст (лет):
+              </span>
+              <input class="control__input" type="number" name="age" value="7">
+            </label>
+          </fieldset>
 
-        <fieldset class="program-selection-form__container program-selection-form__container--without-heading program-selection-form__container--bordered container container--fieldset container--choice">
-          <legend class="visually-hidden">
-            Выберите тип программы
-          </legend>
-          <label class="program-selection-form__control control control--choice">
-            <input class="control__input control__input--choice" type="radio" name="program-type" checked>
-            <span class="control__text">
-              Похудение
-            </span>
-          </label>
-          <label class="program-selection-form__control control control--choice">
-            <input class="control__input control__input--choice" type="radio" name="program-type">
-            <span class="control__text">
-              Набор массы
-            </span>
-          </label>
-          <label class="program-selection-form__control control control--choice">
-            <input class="control__input control__input--choice" type="radio" name="program-type">
-            <span class="control__text">
-              Не знаю (Нужен ваш совет)
-            </span>
-          </label>
-        </fieldset>
+          <fieldset class="program-selection-form__container program-selection-form__container--without-heading program-selection-form__container--bordered container container--choice">
+            <legend class="visually-hidden">
+              Выберите тип программы
+            </legend>
+            <label class="program-selection-form__control control control--choice">
+              <input class="control__input control__input--choice" type="radio" name="program-type" checked>
+              <span class="control__text">
+                Похудение
+              </span>
+            </label>
+            <label class="program-selection-form__control control control--choice">
+              <input class="control__input control__input--choice" type="radio" name="program-type">
+              <span class="control__text">
+                Набор массы
+              </span>
+            </label>
+            <label class="program-selection-form__control control control--choice">
+              <input class="control__input control__input--choice" type="radio" name="program-type">
+              <span class="control__text">
+                Не знаю (Нужен ваш совет)
+              </span>
+            </label>
+          </fieldset>
+        </div>
 
         <fieldset class="program-selection-form__container">
           <div class="program-selection-form__lined-wrapper lined-wrapper lined-wrapper--contacts">
-            <legend class="program-selection-form__lined-title lined-wrapper__title">
-              Контактные данные<br>(владельца кота)
+            <legend class="program-selection-form__lined-title program-selection-form__lined-title--multiline lined-wrapper__title">
+              Контактные данные (владельца кота)
             </legend>
           </div>
           <div class="container container--fieldset">
@@ -178,7 +181,7 @@
               Дополнительно
             </legend>
           </div>
-          <div class="container container--fieldset container--choice">
+          <div class="container container--fieldset container--choice container--multichoice">
             <label class="program-selection-form__control control control--choice">
               <input class="control__input control__input--choice" type="checkbox" name="sweetener" checked>
               <span class="control__text">
@@ -206,34 +209,42 @@
           </div>
         </fieldset>
 
-        <button class="program-selection-form__button button" type="submit">
-          Отправить заявку
-        </button>
-
-        <p class="program-selection-form__tip">
-          * — Обязательные поля
-        </p>
+        <div class="program-selection-form__button-container">
+          <button class="program-selection-form__button button" type="submit">
+            Отправить заявку
+          </button>
+          <p class="program-selection-form__tip">
+            * — Обязательные поля
+          </p>
+        </div>
       </form>
     </main>
 
     <footer class="main-footer">
-      <div class="container container--secondary">
+      <div class="main-footer__container container--secondary">
         <div class="main-footer__address address">
           <h2 class="visually-hidden">
             Где мы находимся
           </h2>
-          <div class="address__text container container">
-            <p class="address__invite">
-              Приглашаем<br>к сотрудничеству дилеров!
-            </p>
-            <p class="address__information">
-              Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-            </p>
+          <div class="address__map-container">
+            <div class="address__text container">
+              <p class="address__invite">
+                Приглашаем<br>к сотрудничеству<br>дилеров!
+              </p>
+              <div class="address__information-container">
+                <p class="address__information address__information--street">
+                  Ул. Большая<br>Конюшенная, д. 19/8
+                </p>
+                <p class="address__information address__information--city">
+                  Санкт-Петербург
+                </p>
+              </div>
+            </div>
+            <img class="address__map" src="./img/map.jpg" width="320" height="362" alt="Мы на карте.">
           </div>
-          <img class="address__map" src="./img/map.jpg" width="320" height="362" alt="Мы на карте.">
         </div>
 
-        <div class="main-footer__socials socials">
+        <div class="main-footer__socials socials container">
           <h2 class="visually-hidden">
             Наши социальные сети
           </h2>

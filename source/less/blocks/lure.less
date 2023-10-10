@@ -1,27 +1,67 @@
-.lure {
-  color: #ffffff;
-  background-image: url("../img/lure-square.png"), url("../img/lure-cat.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  // background-color: #64a83c;
-}
-
 .lure__container {
+  height: 480px;
   padding-top: 27px;
+  position: relative;
+  color: @basic_white;
+  background-image: url("../img/lure-food.png"), url("../img/lure-square.png"), url("../img/lure-cat.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom 43px center, top center, top center;
+  // background-color: @special_green;
+
+  @media (min-width: @tablet-width) {
+    height: 875px;
+    padding: 65px 120px;
+    padding-top: 65px;
+    align-items: flex-start;
+    color: @basic_black;
+    background-image: url("../img/tablet-lure-food.png");
+    background-position: bottom center;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 580px;
+    padding: 110px 190px;
+    background-image: url("../img/desktop-lure-food.png");
+    background-position: bottom 52px right 331px;
+  }
 }
 
 .lure__main-title {
   margin-bottom: 25px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+    text-align: left;
+  }
 }
 
 .lure__slogan {
   margin: 0;
-  margin-bottom: 29px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .lure__link {
+  position: absolute;
   margin-top: 3px;
+  width: 280px;
+  bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    margin-top: 50px;
+    width: 244px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 52px;
+  }
 }
