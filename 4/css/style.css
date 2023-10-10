@@ -1535,6 +1535,7 @@
   }
 }
 .additional-goods {
+  overflow: hidden;
   margin-top: 25px;
 }
 @media (min-width: 768px) {
@@ -1546,6 +1547,9 @@
   .additional-goods {
     margin-top: 76px;
   }
+}
+.additional-goods__general-container {
+  overflow: hidden;
 }
 .additional-goods__lined-wrapper {
   margin-bottom: 36px;
@@ -1770,6 +1774,7 @@
 }
 .program-selection-form {
   padding-bottom: 32px;
+  overflow: hidden;
 }
 .program-selection-form__main-title {
   margin-top: 27px;
