@@ -1,5 +1,23 @@
 .navigation {
+  position: absolute;
+  z-index: 2;
+  top: 65px;
+  background-color: @basic_white;
   width: 100%;
+
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    display: block;
+    top: 0;
+  }
 }
 
 .navigation__list {
