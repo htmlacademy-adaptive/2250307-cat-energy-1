@@ -1,11 +1,5 @@
-.address {
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
-    margin: 0 auto;
-  }
-}
-
 .address__text {
+  width: 100%;
   padding-top: 26px;
   padding-bottom: 26px;
   display: flex;
@@ -75,15 +69,23 @@
 
 .address__map {
   display: block;
-  margin: 0 auto;
+  width: 100%;
   border: none;
 
+  background-image: url("../img/map.jpg");
+  background-size: 320px 362px;
+  background-position: top center;
+  background-repeat: no-repeat;
+
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
     height: 400px;
+    background-image: url("../img/tablet-map.jpg");
+    background-size: @tablet-width 400px;
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
+    background-color: @basic_grey;
+    background-image: url("../img/desktop-map.jpg");
+    background-size: @desktop-width 400px;
   }
 }

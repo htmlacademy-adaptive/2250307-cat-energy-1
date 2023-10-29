@@ -17,6 +17,7 @@
   gap: 20px;
 
   @media (min-width: @tablet-width) {
+    counter-reset: count_item 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -31,8 +32,23 @@
   background-position: top left;
 
   @media (min-width: @tablet-width) {
+    counter-increment: count_item 1;
     min-height: 280px;
     max-width: 249px;
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: counter(count_item);
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      color: @basic_grey;
+      font-size: 280px;
+      line-height: 280px;
+      z-index: -1;
+    }
   }
 
   &--leaf {
@@ -75,20 +91,6 @@
 .progress__title {
   @media (min-width: @tablet-width) {
     margin-bottom: 32px;
-  }
-}
-
-.progress__number {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
-    display: block;
-    color: @basic_grey;
-    font-size: 280px;
-    line-height: 280px;
-    z-index: -1;
   }
 }
 

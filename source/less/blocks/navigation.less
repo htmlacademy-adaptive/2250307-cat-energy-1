@@ -23,6 +23,10 @@
     display: block;
     top: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .navigation__list {
@@ -68,11 +72,6 @@
   @media (min-width: @tablet-width) {
     padding: 0 0 10px 0;
     width: fit-content;
-  }
-
-  @media (min-width: @desktop-width) {
-    // временные меры
-    background-color: @basic_green;
   }
 
   &::after {
