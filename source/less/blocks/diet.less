@@ -49,14 +49,29 @@
     background-image: url("../img/cat-slim-icon.png");
     background-position: 20px 21px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-slim-icon@2X.png");
+      background-size: 50px auto;
+    }
+
     @media (min-width: @tablet-width) {
       background-image: url("../img/tablet-cat-slim-icon.png");
       background-position: top 81px right 63px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-cat-slim-icon@2X.png");
+        background-size: 200px auto;
+      }
     }
 
     @media (min-width: @desktop-width) {
       background-image: url("../img/desktop-cat-slim-icon.png");
       background-position: top 41px left 52px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/desktop-cat-slim-icon@2X.png");
+        background-size: 100px auto;
+      }
     }
   }
 
@@ -64,14 +79,29 @@
     background-image: url("../img/cat-pro-icon.png");
     background-position: 13px 24px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-pro-icon@2X.png");
+      background-size: 67px auto;
+    }
+
     @media (min-width: @tablet-width) {
       background-image: url("../img/tablet-cat-pro-icon.png");
       background-position: top 91px right 29px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-cat-pro-icon@2X.png");
+        background-size: 268px auto;
+      }
     }
 
     @media (min-width: @desktop-width) {
-      background-image: url("../img/desktop-cat-pro-icon.png");
+      background-image: url("../img/desktop-cat-pro-icon@2X.png");
       background-position: top 47px left 33px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/desktop-cat-pro-icon@2X.png");
+        background-size: 134px auto;
+      }
     }
   }
 }
