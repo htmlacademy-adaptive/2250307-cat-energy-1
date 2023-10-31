@@ -36,6 +36,24 @@
   @media (min-width: @desktop-width) {
     gap: 14px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--current {
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
 }
 
 .main-header__navigation-toggle {

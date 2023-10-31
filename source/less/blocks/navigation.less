@@ -69,6 +69,14 @@
   text-align: center;
   position: relative;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0 0 10px 0;
     width: fit-content;
@@ -89,6 +97,14 @@
   }
 
   &--current {
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
     @media (min-width: @tablet-width) {
       position: relative;
     }
@@ -107,6 +123,14 @@
   }
 
   &--current-light {
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
     @media (min-width: @tablet-width) {
       position: relative;
     }
