@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="./css/style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +15,7 @@
     <header class="main-header">
       <div class="main-header__container">
         <div class="container container--navigation">
-          <a class="main-header__logo-link">
+          <a class="main-header__logo-link main-header__logo-link--current">
             <span class="visually-hidden">
               Cat Energy.
             </span>
@@ -93,7 +97,13 @@
           <p class="lure__slogan">
             Занялся собой? Займись котом!
           </p>
-          <img class="lure__picture" src="./img/lure-food.png" width="280" height="270" alt="Функциональное питание для котов Cat Energy с курицей.">
+          <div class="lure__picture-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/lure-food-desktop.png 1x, ./img/lure-food-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/lure-food-tablet.jpg 1x, ./img/lure-food-tablet@2x.jpg 2x">
+              <img class="lure__picture" src="./img/lure-food.png" srcset="./img/lure-food@2x.png 2x" width="280" height="270" alt="Функциональное питание для котов Cat Energy с курицей.">
+            </picture>
+          </div>
           <a class="lure__link button" href="form.html">
             Подобрать программу
           </a>
@@ -222,8 +232,14 @@
 
       <section class="slider">
         <div class="slider__container">
-          <img class="slider__picture slider__picture--before" src="./img/fat-cat.png" width="140" height="256" alt="Кот до снижения веса.">
-          <img class="slider__picture slider__picture--after" src="./img/slim-cat.png" width="140" height="256" alt="Кот после снижения веса.">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/tablet-fat-cat.png 1x, ./img/tablet-fat-cat@2x.png 2x">
+            <img class="slider__picture slider__picture--before" src="./img/fat-cat.png" srcset="./img/fat-cat@2x.png 2x" width="140" height="256" alt="Кот до снижения веса.">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/tablet-slim-cat.png 1x, ./img/tablet-slim-cat@2x.png 2x">
+            <img class="slider__picture slider__picture--after" src="./img/slim-cat.png" srcset="./img/slim-cat@2x.png 2x" width="140" height="256" alt="Кот после снижения веса.">
+          </picture>
           <button class="slider__button" type="button">
             <svg class="slider__texture" width="40" height="256" viewBox="0 0 40 256" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="18" width="4" height="256" rx="2" fill="#666666"/>

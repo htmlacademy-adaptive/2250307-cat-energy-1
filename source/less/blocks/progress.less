@@ -30,11 +30,14 @@
   min-height: 60px;
   background-repeat: no-repeat;
   background-position: top left;
+  background-size: 60px auto;
 
   @media (min-width: @tablet-width) {
     counter-increment: count_item 1;
     min-height: 280px;
     max-width: 249px;
+    background-size: 80px auto;
+    background-position: top 40px left 0;
   }
 
   &::after {
@@ -54,36 +57,64 @@
   &--leaf {
     background-image: url("../img/progress-leaf.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/progress-leaf@2x.jpg");
+    }
+
     @media (min-width: @tablet-width) {
       background-image: url("../img/tablet-progress-leaf.jpg");
-      background-position: top 40px left 0;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-progress-leaf@2x.jpg");
+      }
     }
   }
 
   &--boiled-water {
     background-image: url("../img/progress-boiled-water.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/progress-boiled-water@2x.jpg");
+    }
+
     @media (min-width: @tablet-width) {
       background-image: url("../img/tablet-progress-boiled-water.jpg");
-      background-position: top 40px left 0;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-progress-boiled-water@2x.jpg");
+      }
     }
   }
 
   &--cultery {
     background-image: url("../img/progress-cultery.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/progress-cultery@2x.jpg");
+    }
+
     @media (min-width: @tablet-width) {
       background-image: url("../img/tablet-progress-cultery.jpg");
-      background-position: top 40px left 0;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-progress-cultery@2x.jpg");
+      }
     }
   }
 
   &--alarm {
     background-image: url("../img/progress-alarm.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/progress-alarm@2x.jpg");
+    }
+
     @media (min-width: @tablet-width) {
       background-image: url("../img/tablet-progress-alarm.jpg");
-      background-position: top 40px left 0;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/tablet-progress-alarm@2x.jpg");
+      }
     }
   }
 }

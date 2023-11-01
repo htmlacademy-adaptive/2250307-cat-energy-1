@@ -12,8 +12,24 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  &:hover {
+    background-color: @green_button_hover;
+  }
+
+  &:active {
+    color: rgba(@basic_white, 0.3);
+  }
+
   &--more-products {
     color: @special_light_grey;
     background-color: @basic_grey;
+
+    &:hover {
+      background-color: @lightest_products_grey;
+    }
+
+    &:active {
+      color: @special_light_grey;
+    }
   }
 }
