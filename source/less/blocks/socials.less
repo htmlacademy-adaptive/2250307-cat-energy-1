@@ -25,6 +25,23 @@
   justify-content: center;
 }
 
+.socials__logo {
+  fill: @special_darkest_grey;
+
+  &:hover {
+    fill: @footer-logo-hover;
+  }
+
+  &:focus {
+    outline: none;
+    fill: @footer-logo-hover;
+  }
+
+  &:active {
+    fill: @footer-logo-active;
+  }
+}
+
 .socials__list {
   width: 100%;
   margin: 0;
@@ -66,4 +83,21 @@
 
 .socials__link {
   display: flex;
+}
+
+.socials__icon {
+  fill: @icon-color;
+
+  &:hover {
+    fill: @basic_green;
+  }
+
+  &:focus {
+    outline: none;
+    fill: @basic_green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

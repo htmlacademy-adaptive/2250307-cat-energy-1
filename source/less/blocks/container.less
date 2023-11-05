@@ -67,7 +67,6 @@
 
   &--fieldset {
     gap: 14px;
-    align-items: flex-start;
 
     @media (min-width: @tablet-width) {
       padding: 0 70px;
@@ -81,21 +80,21 @@
     }
   }
 
-  &--choice {
-    gap: 13px;
-  }
-
   &--multichoice {
+    gap: 13px;
+
     @media (min-width: @tablet-width) {
-      row-gap: 32px;
+      padding: 0 70px;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      row-gap: 32px;
+      column-gap: 60px;
     }
 
     @media (min-width: @desktop-width) {
-      row-gap: 60px;
-      display: grid;
+      padding: 0 110px;
       grid-template-columns: repeat(4, 1fr);
+      column-gap: 80px;
     }
   }
 }
