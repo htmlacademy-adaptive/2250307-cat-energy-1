@@ -1,5 +1,52 @@
 .lure {
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: @basic_green;
+    opacity: 85%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 178px;
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      min-height: 694px;
+      top: -114px;
+      left: 50%;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      height: 694px;
+      top: -114px;
+      left: 50%;
+      right: 0;
+      bottom: 0;
+      background-image: url("../img/desktop-lure-cat.jpg");
+      background-position: top left;
+      background-repeat: no-repeat;
+      z-index: 0;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/desktop-lure-cat@2x.jpg");
+        background-size: calc(@desktop-width / 2) auto;
+      }
+    }
+  }
 }
 
 .lure__container {
@@ -27,54 +74,6 @@
   @media (min-width: @desktop-width) {
     min-height: 580px;
     padding: 110px 190px;
-  }
-}
-
-.lure__color-wrapper {
-  position: absolute;
-  background-color: @basic_green;
-  opacity: 85%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 178px;
-  z-index: 1;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: block;
-    min-height: 694px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    right: 0;
-    top: -114px;
-  }
-}
-
-.lure__background-wrapper {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    display: block;
-    height: 694px;
-    bottom: 0;
-    left: 50%;
-    right: 0;
-    top: -114px;
-    background-image: url("../img/desktop-lure-cat.jpg");
-    background-position: top left;
-    background-repeat: no-repeat;
-    z-index: 0;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/desktop-lure-cat@2x.jpg");
-      background-size: calc(@desktop-width / 2) auto;
-    }
   }
 }
 
