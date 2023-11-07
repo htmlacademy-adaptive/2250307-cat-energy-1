@@ -12,6 +12,22 @@
   align-items: center;
   text-decoration: none;
 
+  &:hover {
+    .copyright__logo {
+      fill: @basic_green;
+    }
+  }
+
+  &:focus {
+    .copyright__logo {
+      fill: @basic_green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
     gap: 23px;
@@ -24,4 +40,8 @@
   line-height: 20px;
   white-space: nowrap;
   color: @special_light_grey;
+}
+
+.copyright__logo {
+  fill: @icon-color;
 }

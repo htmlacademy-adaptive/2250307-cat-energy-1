@@ -1,8 +1,9 @@
 .control {
+  position: relative;
   width: 100%;
   display: flex;
-  gap: 13px;
   align-items: center;
+  gap: 13px;
   font-size: 16px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -14,11 +15,16 @@
   }
 
   &--choice {
-    gap: 15px;
+    padding: 6px 0 6px 45px;
 
     @media (min-width: @tablet-width) {
-      gap: 20px;
+      padding: 5px 0 5px 60px;
+      height: 40px;
     }
+  }
+
+  &--with-decor {
+    position: relative;
   }
 }
 
@@ -39,29 +45,118 @@
     height: 52px;
   }
 
+  &:hover {
+    border-color: @special_grey;
+  }
+
+  &:hover:enabled + .control__mark {
+    border-color: @choice-input-hover;
+  }
+
+  &:disabled ~ .control__mark,
+  &:disabled ~ .control__text {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    border-color: transparent;
+    outline: 2px @special_light_grey solid;
+  }
+
+  &:invalid {
+    border-color: transparent;
+    outline: 2px @error-input solid;
+  }
+
+  &:checked + .control__mark {
+    &--radio::before {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: @basic_green;
+      border-radius: 100%;
+
+      @media (min-width: @tablet-width) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &--checkbox::before {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("../img/tick.svg");
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../img/tick-tablet.svg");
+      }
+    }
+  }
+
   &--choice {
     flex-grow: 0;
     height: 30px;
   }
 
   &--with-decor {
-    background-repeat: no-repeat;
-    background-position: top 12px right 12px;
+    padding-right: 40px;
 
-    @media (min-width: @tablet-width) {
-      background-position: top 15px right 13px;
+    &:focus + .control__decor {
+      stroke: @basic_green;
     }
 
-    @media (min-width: @desktop-width) {
-      background-position: top 15px right 15px;
+    &:invalid + .control__decor {
+      stroke: @error-input;
     }
   }
+}
 
-  &--email {
-    background-image: url("../img/email-decor.png");
-  }
+.control__decor {
+  position: absolute;
+  stroke: @basic_black;
+  top: 13px;
+  right: 12px;
 
   &--phone {
-    background-image: url("../img/phone-decor.png");
+    right: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 16px;
+    right: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 16px;
+  }
+}
+
+.control__mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: @basic_white;
+  border: 1px @special_grey solid;
+
+  &--radio {
+    border-radius: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
   }
 }
