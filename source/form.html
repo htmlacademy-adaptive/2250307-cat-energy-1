@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy: Подбор программы</title>
@@ -121,19 +121,19 @@
               <span class="control__text">
                 Имя:*
               </span>
-              <input class="control__input" type="text" name="name" value="Барсик" required>
+              <input class="control__input" type="text" name="name" placeholder="Барсик" required>
             </label>
             <label class="program-selection-form__control control">
               <span class="control__text">
                 Вес (кг):*
               </span>
-              <input class="control__input" type="number" name="weight" value="7" required>
+              <input class="control__input" type="number" name="weight" placeholder="7" required>
             </label>
             <label class="program-selection-form__control control">
               <span class="control__text">
                 Возраст (лет):
               </span>
-              <input class="control__input" type="number" name="age" value="7">
+              <input class="control__input" type="number" name="age" placeholder="7">
             </label>
           </fieldset>
 
@@ -179,7 +179,7 @@
               <span class="control__text">
                 E-mail:*
               </span>
-              <input class="control__input control__input--with-decor control__input--email" type="email" name="email" value="kuklachev@gmail.com" required>
+              <input class="control__input control__input--with-decor control__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
               <svg class="control__decor control__decor--email" width="20" height="20">
                 <use xlink:href="#email-decor"></use>
               </svg>
@@ -188,7 +188,7 @@
               <span class="control__text">
                 Телефон:*
               </span>
-              <input class="control__input control__input--with-decor control__input--phone" type="tel" name="telephone" value="8 (960) 900-60-90" required>
+              <input class="control__input control__input--with-decor control__input--phone" type="tel" name="telephone" placeholder="8 (960) 900-60-90" required>
               <svg class="control__decor control__decor--phone" width="20" height="20">
                 <use xlink:href="#phone-decor"></use>
               </svg>
@@ -203,7 +203,7 @@
             </legend>
           </div>
           <div class="container container--fieldset">
-            <textarea class="program-selection-form__textarea" name="comment">Расскажите обо всех повадках кота</textarea>
+            <textarea class="program-selection-form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
 
@@ -295,7 +295,7 @@
             Наши социальные сети
           </h2>
 
-          <a class="socials__logo-link" href="form.html">
+          <a class="socials__logo-link" href="index.html">
             <svg class="socials__logo" width="128" height="24">
               <use xlink:href="#footer-logo"></use>
             </svg>

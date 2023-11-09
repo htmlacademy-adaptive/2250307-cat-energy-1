@@ -5,7 +5,7 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy</title>
@@ -16,6 +16,12 @@
       <symbol viewBox="0 0 32 12" id="arrow-icon">
         <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
         <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
+      </symbol>
+      <symbol viewBox="0 0 40 40" id="slider-texture">
+        <rect x="1" y="1" width="38" height="38" rx="19"/>
+        <rect class="slider__texture-stroke" x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
+        <path class="slider__texture-fill" d="M16 11L8 20L16 29V11Z"/>
+        <path class="slider__texture-fill" d="M32 20L24 11V29L32 20Z"/>
       </symbol>
       <symbol viewBox="0 0 128 24" id="footer-logo">
         <g clip-path="url(#clip0_106126_381)">
@@ -256,10 +262,12 @@
             <img class="slider__picture slider__picture--after" src="./img/slim-cat.png" srcset="./img/slim-cat@2x.png 2x" width="140" height="256" alt="Кот после снижения веса.">
           </picture>
           <button class="slider__button" type="button">
-            <picture>
-              <source media="(min-width: 768px)" srcset="./img/slider-tablet.svg">
-              <img class="slider__texture" src="./img/slider.svg" width="40" height="256" alt="Слайдер.">
-            </picture>
+            <svg class="slider__texture" width="40" height="40" viewBox="0 0 40 40">
+              <rect x="1" y="1" width="38" height="38" rx="19"/>
+              <rect class="slider__texture-stroke" x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
+              <path class="slider__texture-fill" d="M16 11L8 20L16 29V11Z"/>
+              <path class="slider__texture-fill" d="M32 20L24 11V29L32 20Z"/>
+            </svg>
           </button>
         </div>
       </section>
@@ -300,7 +308,7 @@
             Наши социальные сети
           </h2>
 
-          <a class="socials__logo-link" href="index.html">
+          <a class="socials__logo-link">
             <svg class="socials__logo" width="128" height="24">
               <use xlink:href="#footer-logo"></use>
             </svg>
