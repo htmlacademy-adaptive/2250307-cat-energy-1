@@ -8,11 +8,11 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
-// import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
 import svgstore from 'gulp-svgstore';
-// import del from 'del';
-// import browser from 'browser-sync';
+import del from 'del';
+import imagemin from 'gulp-imagemin';
+import webp from 'gulp-webp';
 
 // Styles
 export const styles = () => {
@@ -43,23 +43,26 @@ const scripts = () => {
 }
 
 // Images
-// const optimizeImages = () => {
-//   return gulp.src('source/img/**/*.{jpg,png}')
-//     .pipe(squoosh())
-//     .pipe(gulp.dest('build/img'))
-// }
+const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(imagemin([
+    imagemin.mozjpeg({progressive: true}),
+    imagemin.optipng({optimizationLevel: 3})
+    ]))
+    .pipe(gulp.dest('build/img'))
+}
 
-// export const copyImages = () => {
-//   return gulp.src('source/img/**/*.{jpg,png}')
-//     .pipe(gulp.dest('build/img'))
-// }
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(gulp.dest('build/img'))
+}
 
 // WebP
-// export const createWebp = () => {
-//   return gulp.src('source/img/**/*.{jpg,png}')
-//     .pipe(squoosh({ webp: {} }))
-//     .pipe(gulp.dest('build/img'));
-// }
+const createWebp = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest('build/img'));
+}
 
 // SVG
 const svg = () =>
@@ -89,9 +92,9 @@ const copy = (done) => {
 }
 
 // Clean
-// export const clean = () => {
-//   return del('build');
-// };
+const clean = () => {
+  return del('build');
+};
 
 // Server
 const server = (done) => {
@@ -121,30 +124,30 @@ const watcher = () => {
 
 // Build
 export const build = gulp.series(
-  // clean,
+  clean,
   copy,
-  // optimizeImages,
+  optimizeImages,
   gulp.parallel(
     styles,
     html,
     scripts,
     svg,
-    sprite
-    // createWebp
+    sprite,
+    createWebp
   ),
 );
 
 export default gulp.series(
-  // clean,
+  clean,
   copy,
-  // copyImages,
+  copyImages,
   gulp.parallel(
     styles,
     html,
     scripts,
     svg,
-    sprite
-    // createWebp
+    sprite,
+    createWebp
   ),
   gulp.series(
     server,
