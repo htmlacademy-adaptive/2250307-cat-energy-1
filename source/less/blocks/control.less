@@ -45,6 +45,10 @@
     height: 52px;
   }
 
+  &::placeholder {
+    color: inherit;
+  }
+
   &:hover {
     border-color: @special_grey;
   }
@@ -63,7 +67,7 @@
     outline: 2px @special_light_grey solid;
   }
 
-  &:invalid {
+  &:invalid:not(:placeholder-shown) {
     border-color: transparent;
     outline: 2px @error-input solid;
   }
@@ -115,7 +119,7 @@
       stroke: @basic_green;
     }
 
-    &:invalid + .control__decor {
+    &:invalid:not(:placeholder-shown) + .control__decor {
       stroke: @error-input;
     }
   }
