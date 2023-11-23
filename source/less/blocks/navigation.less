@@ -22,10 +22,14 @@
     position: static;
     display: block;
     top: 0;
+    height: 100%;
+    padding-top: 14px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: transparent;
+    padding-top: 16px;
+    max-width: 720px;
   }
 }
 
@@ -39,6 +43,7 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 33px;
   }
 
@@ -82,6 +87,10 @@
     width: fit-content;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-bottom: 8px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -116,8 +125,12 @@
         height: 2px;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 2px;
         background-color: @basic_green;
+      }
+
+      @media (min-width: @desktop-width) {
+        bottom: 0;
       }
     }
   }
@@ -169,6 +182,9 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 20px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
   }
 
   &--light {

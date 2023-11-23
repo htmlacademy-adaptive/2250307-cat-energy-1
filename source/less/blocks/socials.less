@@ -11,18 +11,24 @@
     padding-bottom: 55px;
     flex-direction: row;
     justify-content: space-between;
+    gap: 120px;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 66px;
     padding-bottom: 66px;
+    gap: 216px;
   }
 }
 
 .socials__logo-link {
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 40px;
+  }
 }
 
 .socials__logo {
@@ -52,6 +58,7 @@
   display: flex;
   gap: 24px;
   justify-content: center;
+  flex-wrap: wrap;
   position: relative;
 
   &::before {
