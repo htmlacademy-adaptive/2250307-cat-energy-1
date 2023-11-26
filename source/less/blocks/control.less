@@ -38,6 +38,7 @@
   line-height: inherit;
   text-transform: inherit;
   color: inherit;
+  appearance: textfield;
 
   @media (min-width: @tablet-width) {
     padding: 11px 20px;
@@ -109,6 +110,10 @@
   &--choice {
     flex-grow: 0;
     height: 30px;
+
+    &:focus + .control__mark {
+      outline: 2px @special_light_grey solid;
+    }
   }
 
   &--with-decor {
