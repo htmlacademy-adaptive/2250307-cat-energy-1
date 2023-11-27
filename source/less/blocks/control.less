@@ -6,7 +6,6 @@
   gap: 13px;
   font-size: 16px;
   text-transform: uppercase;
-  white-space: nowrap;
   color: @special_light_grey;
 
   @media (min-width: @tablet-width) {
@@ -19,7 +18,7 @@
 
     @media (min-width: @tablet-width) {
       padding: 5px 0 5px 60px;
-      height: 40px;
+      min-height: 40px;
     }
   }
 
@@ -39,6 +38,7 @@
   line-height: inherit;
   text-transform: inherit;
   color: inherit;
+  appearance: textfield;
 
   @media (min-width: @tablet-width) {
     padding: 11px 20px;
@@ -110,6 +110,10 @@
   &--choice {
     flex-grow: 0;
     height: 30px;
+
+    &:focus + .control__mark {
+      outline: 2px @special_light_grey solid;
+    }
   }
 
   &--with-decor {
@@ -128,15 +132,15 @@
 .control__decor {
   position: absolute;
   stroke: @basic_black;
-  top: 13px;
   right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 
   &--phone {
     right: 13px;
   }
 
   @media (min-width: @tablet-width) {
-    top: 16px;
     right: 14px;
   }
 

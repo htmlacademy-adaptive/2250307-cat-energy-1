@@ -6,6 +6,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content min-content;
 
   @media (min-width: @tablet-width) {
     grid-row: 1;
@@ -15,8 +16,6 @@
 }
 
 .characteristics-list__description {
-  white-space: nowrap;
-
   @media (min-width: @tablet-width) {
     position: relative;
   }
@@ -26,10 +25,18 @@
       content: "";
       position: absolute;
       height: 1px;
-      bottom: -5px;
+      bottom: -7px;
       left: 0;
       right: 0;
       background-color: @special_grey;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:last-of-type {
+      &::after {
+        bottom: -11px;
+      }
     }
   }
 }
@@ -43,10 +50,18 @@
       content: "";
       position: absolute;
       height: 1px;
-      bottom: -5px;
+      bottom: -7px;
       left: 0;
       right: 0;
       background-color: @special_grey;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:last-of-type {
+      &::after {
+        bottom: -11px;
+      }
     }
   }
 }

@@ -16,18 +16,6 @@
     padding: 0 110px;
   }
 
-  &--main {
-    overflow: hidden;
-  }
-
-  &--light {
-    background-color: @basic_white;
-  }
-
-  &--secondary {
-    background-color: @basic_grey;
-  }
-
   &--navigation {
     display: flex;
     flex-direction: row;
@@ -44,6 +32,8 @@
 
     @media (min-width: @desktop-width) {
       padding-right: 0;
+      padding-left: 0;
+      margin-left: 110px;
     }
   }
 
@@ -75,8 +65,10 @@
 
     @media (min-width: @desktop-width) {
       padding: 0 110px;
-      flex-direction: row;
-      gap: 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+      row-gap: 40px;
     }
   }
 

@@ -1,6 +1,10 @@
 .progress__container {
   align-items: flex-start;
-  padding-bottom: 49px;
+  padding-bottom: 46px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 105px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 205px;
@@ -23,6 +27,11 @@
     justify-content: space-between;
     row-gap: 37px;
   }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+    gap: 76px;
+  }
 }
 
 .progress__item {
@@ -44,6 +53,7 @@
     @media (min-width: @tablet-width) {
       content: counter(count_item);
       position: absolute;
+      min-width: 134px;
       right: 0;
       top: 0;
       display: block;
@@ -132,5 +142,13 @@
 
   @media (min-width: @tablet-width) {
     margin: 151px 0 0 0;
+  }
+}
+
+.progress__description-new-stroke {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }

@@ -19,7 +19,7 @@
     @media (min-width: @desktop-width) {
       display: block;
       min-height: 694px;
-      top: -114px;
+      top: -100%;
       left: 50%;
       right: 0;
       bottom: 0;
@@ -129,10 +129,11 @@
 
 .lure__picture {
   display: block;
+  object-fit: contain;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    right: 0;
+    right: 30px;
     bottom: 0;
     width: 709px;
     height: 609px;
