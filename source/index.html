@@ -242,14 +242,21 @@
         <div class="example__slider slider">
           <div class="slider__container">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/tablet-fat-cat.webp 1x, ./img/tablet-fat-cat@2x.webp 2x">
+              <source type="image/webp" srcset="./img/fat-cat.webp 1x, ./img/fat-cat@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="./img/tablet-fat-cat.png 1x, ./img/tablet-fat-cat@2x.png 2x">
               <img class="slider__picture slider__picture--before" src="./img/fat-cat.png" srcset="./img/fat-cat@2x.png 2x" width="140" height="256" alt="Кот до снижения веса.">
             </picture>
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/tablet-slim-cat.webp 1x, ./img/tablet-slim-cat@2x.webp 2x">
+              <source type="image/webp" srcset="./img/slim-cat.webp 1x, ./img/slim-cat@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="./img/tablet-slim-cat.png 1x, ./img/tablet-slim-cat@2x.png 2x">
               <img class="slider__picture slider__picture--after" src="./img/slim-cat.png" srcset="./img/slim-cat@2x.png 2x" width="140" height="256" alt="Кот после снижения веса.">
             </picture>
             <button class="slider__button" type="button">
+              <span class="visually-hidden">
+                Смотреть до и после.
+              </span>
               <svg class="slider__texture" width="40" height="40" viewBox="0 0 40 40">
                 <rect x="1" y="1" width="38" height="38" rx="19"/>
                 <rect class="slider__texture-stroke" x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
@@ -298,6 +305,9 @@
           </h2>
 
           <a class="socials__logo-link">
+            <span class="visually-hidden">
+              Cat Energy.
+            </span>
             <svg class="socials__logo" width="128" height="24">
               <use xlink:href="#footer-logo"></use>
             </svg>
